@@ -1,3 +1,15 @@
+(function () {
+  function changeWindow(x) {
+    if (x.matches) {
+      document.querySelector('#p-btn').classList.add('col-12', 'btn-group');
+    } else {
+      document.querySelector('#p-btn').classList.remove('col-12', 'btn-group');
+    }
+  }
+  let x = window.matchMedia("(max-width: 768px)");
+  changeWindow(x);
+  x.addEventListener("change", changeWindow);
+})();
 let formDistance = document.getElementById('formDistance'), speed = document.getElementById('speed'), time = document.getElementById('time'), demo = document.getElementById('demo'), fspeed = document.getElementById('fspeed'), ftime = document.getElementById('ftime');
 let d = 0;
 formDistance.addEventListener('submit', function (e) {

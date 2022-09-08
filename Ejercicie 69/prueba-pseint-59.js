@@ -1,3 +1,16 @@
+(function () {
+  function changeWindow(x) {
+    if (x.matches) {
+      console.log(true);
+      document.querySelector('#p-btn').classList.add('col-12', 'btn-group');
+    } else {
+      document.querySelector('#p-btn').classList.remove('col-12', 'btn-group');
+    }
+  }
+  let x = window.matchMedia("(max-width: 768px)");
+  changeWindow(x);
+  x.addEventListener("change", changeWindow);
+})();
 window.onload = function () {
   document.getElementById('formX').reset();
 }
@@ -17,7 +30,6 @@ formX.addEventListener('submit', ev => {
     trTbody.querySelectorAll('td')[4].innerText = num * i;
     const clone = trTbody.cloneNode(true);
     tbody.appendChild(clone);
-    // console.log(`${num} x ${i} = ${num * i}`);
   }
   ev.target.reset();
 });
