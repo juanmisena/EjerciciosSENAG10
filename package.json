@@ -16,7 +16,7 @@
   "bugs": {
     "url": "https://github.com/juanmisena/EjerciciosSENAG10/issues"
   },
-  "homepage": "https://github.com/juanmisena/EjerciciosSENAG10#readme",
+  "homepage": "https://juanmisena.github.io/EjerciciosSENAG10/",
   "dependencies": {
     "gh-pages": "^4.0.0"
   }
